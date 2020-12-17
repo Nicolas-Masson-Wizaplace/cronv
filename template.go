@@ -34,7 +34,7 @@ const TEMPLATE = `
       <hr>
     {{end}}
 
-    <h3>Timeline<h3>
+    <h3>Timeline</h3>
     <div id="cronv-timeline" style="height:100%; width:{{.Opts.Width}}%;">
       <b>Loading...</b>
     </div>
@@ -122,7 +122,7 @@ func makeTemplate() *template.Template {
 		"NewJsDate": func(v time.Time) string {
 			return fmt.Sprintf("new Date(%d,%d,%d,%d,%d)", v.Year(), v.Month(), v.Day(), v.Hour(), v.Minute())
 		},
-		"DateFormat": func(v time.Time, format string) string {
+	little html fix	"DateFormat": func(v time.Time, format string) string {
 			return v.Format(format)
 		},
 		"IsRunningEveryMinutes": func(c *Crontab) bool {
